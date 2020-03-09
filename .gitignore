@@ -1,2 +1,11 @@
-__pycache__
-.pyc
+# python compiled files
+*.pyc
+
+# ignore .vscode directory
+.vscode
+
+# __pycache
+__pycache__/*
+
+# the bash file
+*.sh
