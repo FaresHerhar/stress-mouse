@@ -32,7 +32,8 @@ class AutoClicker:
         time_lap, is in Secondes
         self.pos_x and self.pos_y, are integers but None by default
                                     for current curssor position
-        self.clicks, integer it takes 1 by default, but in general it takes (1,2)
+        self.clicks, integer it takes 1 by default, but in general
+                    it takes(1,2)
         self.times, integer but None by default for no stop clicking.
         """
         self.time_lap = time_lap    # the time lap, between each click
