@@ -85,9 +85,13 @@ class AutoClicker:
             self.runEnd()
 
     def stop(self):
-        """Stoping the autoClicker."""
+        """Stoping the autoClicker.
+        In case the user wants to close the execution.
+        """
         return
 
     def pause(self):
-        """Pausing the autoClicker."""
+        """Pausing the autoClicker.
+        In case the user wants to put the execution on hold.
+        """
         pass
