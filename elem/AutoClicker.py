@@ -76,3 +76,18 @@ class AutoClicker:
         for count in range(self.times):
             self.click()                    # on click event
             time.sleep(self.time_lap)       # sleeping
+
+    def start(self):
+        """For telling the autoClicker to start."""
+        if self.times is None:
+            self.runEndless()
+        else:
+            self.runEnd()
+
+    def stop(self):
+        """Stoping the autoClicker."""
+        return
+
+    def pause(self):
+        """Pausing the autoClicker."""
+        pass
