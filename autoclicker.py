@@ -1,5 +1,6 @@
 import pyautogui
 import time
+import sys
 
 
 class AutoClicker:
@@ -35,6 +36,8 @@ class AutoClicker:
         self.clicks, integer it takes 1 by default, but in general
                     it takes(1,2)
         self.times, integer but None by default for no stop clicking.
+        self.screen_width            # screen, monitor's width
+        self.screen_height           # screen, monitor's height
         """
         self.time_lap = time_lap    # the time lap, between each click
         self.pos_x = pos_x          # the x posistion of the mouse
@@ -42,9 +45,10 @@ class AutoClicker:
         self.clicks = clicks        # the number of clicke, per time
         self.button = button        # the clicked button, either left or right
         self.times = times          # how many times, to do the clicks
+        self.screen_width, self.screen_height = pyautogui.size()    # abvious
 
     def click(self):
-        """This method defines a single click of the mouse."""
+        """This method defines a single click event of the mouse."""
         pyautogui.click(clicks=self.clicks, button=self.button)
 
     def setMousePosition(self):
@@ -54,6 +58,16 @@ class AutoClicker:
         """
         if self.pos_x is None and self.pos_y is None:
             self.pos_x, self.pos_y = pyautogui.position()
+        else:
+            # in case the mouse cursor position is out of boubds
+            cond1 = (0 <= self.pos_x <= self.screen_width)
+            cond2 = (0 <= self.pos_y <= self.screen_height)
+
+            # if so, exit the execution witha notification error
+            if cond1 or cond2:
+                raise ValueError('Mouse cursor: pox_x & pos_y out of bounds.')
+
+                sys.exit()
 
     def runEndless(self):
         """FOR ENDLESS ITERATIONS, UNKOWN TIMES OF ITERATIONS.
@@ -84,19 +98,7 @@ class AutoClicker:
         else:
             self.runEnd()
 
-    def stop(self):
-        """Stoping the autoClicker.
-        In case the user wants to close the execution.
-        """
-        return
-
-    def pause(self):
-        """Pausing the autoClicker.
-        In case the user wants to put the execution on hold.
-        """
-        pass
-
 
 if __name__ == "__main__":
-    clicker = AutoClicker(3, times=10)
+    clicker = AutoClicker(time_lap=3, times=10)
     clicker.start()
