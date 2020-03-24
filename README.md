@@ -22,5 +22,5 @@ clicker.start()
 
 # What is missing
 #### To be honest i am not satisfied with it
-A GUI, is really missing so please add one, and notify me please, i really want use it witha GUI.<br>
+A GUI, is really missing so please add one and give me a notice, i really want use it with a GUI.<br>
 Also, the hotkeys option is really awsome too.
