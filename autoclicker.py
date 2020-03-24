@@ -95,3 +95,8 @@ class AutoClicker:
         In case the user wants to put the execution on hold.
         """
         pass
+
+
+if __name__ == "__main__":
+    clicker = AutoClicker(3, times=10)
+    clicker.start()
