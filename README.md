@@ -1,7 +1,6 @@
 # stress-mouse
 A cli autoclicker, an application for automating the mouse clicking process. <br> 
-Written in pytohn, looked for adding a GUI but i really suck at it :sweat_smile: :sweat_smile:.
-
+Written in pytohn, looked for adding a GUI but i really suck at it :relieved: :relieved: :relieved:.
 # Tools
 * Language:
     * Python 3.6
