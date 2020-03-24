@@ -8,13 +8,12 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
+
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.setEnabled(True)
-        MainWindow.resize(530, 600)
-        MainWindow.setMinimumSize(QtCore.QSize(530, 600))
-        MainWindow.setMaximumSize(QtCore.QSize(530, 600))
+        MainWindow.setFixedSize(530, 600)
         MainWindow.setIconSize(QtCore.QSize(128, 128))
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
@@ -129,12 +128,14 @@ class Ui_MainWindow(object):
         MainWindow.setMenuBar(self.menubar)
         self.actionHelp = QtWidgets.QAction(MainWindow)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("../icons/question.svg"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        icon.addPixmap(QtGui.QPixmap("../icons/question.svg"),
+                       QtGui.QIcon.Normal, QtGui.QIcon.On)
         self.actionHelp.setIcon(icon)
         self.actionHelp.setObjectName("actionHelp")
         self.actionAbout = QtWidgets.QAction(MainWindow)
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("../icons/about.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap("../icons/about.svg"),
+                        QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.actionAbout.setIcon(icon1)
         self.actionAbout.setObjectName("actionAbout")
         self.actionHelp_2 = QtWidgets.QAction(MainWindow)
@@ -152,11 +153,13 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.groupBox.setTitle(_translate("MainWindow", "Mouse position"))
-        self.default_position.setText(_translate("MainWindow", "Default mouse position"))
+        self.default_position.setText(_translate(
+            "MainWindow", "Default mouse position"))
         self.pick_position.setText(_translate("MainWindow", "Pick position"))
         self.label.setText(_translate("MainWindow", "X Position"))
         self.label_2.setText(_translate("MainWindow", "Y Position"))
-        self.groupBox_2.setTitle(_translate("MainWindow", "Time delay between clicks"))
+        self.groupBox_2.setTitle(_translate(
+            "MainWindow", "Time delay between clicks"))
         self.label_3.setText(_translate("MainWindow", "Hours"))
         self.label_4.setText(_translate("MainWindow", "Minutes"))
         self.label_5.setText(_translate("MainWindow", "Secondes"))
@@ -164,19 +167,23 @@ class Ui_MainWindow(object):
         self.groupBox_3.setTitle(_translate("MainWindow", "Click options"))
         self.label_7.setText(_translate("MainWindow", "Mouse button"))
         self.label_8.setText(_translate("MainWindow", "Click type"))
-        self.mouse_button.setItemText(0, _translate("MainWindow", "Left button"))
-        self.mouse_button.setItemText(1, _translate("MainWindow", "Right button"))
-        self.click_type.setItemText(0, _translate("MainWindow", "Single click"))
-        self.click_type.setItemText(1, _translate("MainWindow", "Double click"))
+        self.mouse_button.setItemText(
+            0, _translate("MainWindow", "Left button"))
+        self.mouse_button.setItemText(
+            1, _translate("MainWindow", "Right button"))
+        self.click_type.setItemText(
+            0, _translate("MainWindow", "Single click"))
+        self.click_type.setItemText(
+            1, _translate("MainWindow", "Double click"))
         self.groupBox_4.setTitle(_translate("MainWindow", "Click times"))
         self.repeat.setText(_translate("MainWindow", "Repeat"))
         self.endless.setText(_translate("MainWindow", "Until stoped"))
         self.label_9.setText(_translate("MainWindow", "Times"))
         self.textEdit.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'Ubuntu\'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
+                                         "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+                                         "p, li { white-space: pre-wrap; }\n"
+                                         "</style></head><body style=\" font-family:\'Ubuntu\'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+                                         "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
         self.pushButton.setText(_translate("MainWindow", "Start"))
         self.pushButton_2.setText(_translate("MainWindow", "Stop"))
         self.menuHelp.setTitle(_translate("MainWindow", "Help"))
@@ -194,4 +201,3 @@ if __name__ == "__main__":
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
-
