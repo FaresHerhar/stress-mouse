@@ -9,6 +9,3 @@ __pycache__/*
 
 # the bash file
 *.sh
-
-# items folder
-items/*

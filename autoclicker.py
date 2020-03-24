@@ -17,7 +17,7 @@ class AutoClicker:
         runEndless
     """
 
-    def __init__(self, time_lap, pos_x=None, pos_y=None, clicks=1,
+    def __init__(self, time_lap=0, pos_x=None, pos_y=None, clicks=1,
                  button=pyautogui.LEFT, times=None):
         """This is the initialisation method:
         the definition of the variables are below.
