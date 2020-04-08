@@ -56,7 +56,7 @@ class AutoClicker:
         In case the user doesn't specify the positions,
         use the default position, of where the mouse is.
         """
-        if self.pos_x is None and self.pos_y is None:
+        if self.pos_x is None or self.pos_y is None:
             self.pos_x, self.pos_y = pyautogui.position()
         else:
             # in case the mouse cursor position is out of boubds
@@ -100,5 +100,5 @@ class AutoClicker:
 
 
 if __name__ == "__main__":
-    clicker = AutoClicker(time_lap=3, times=10)
+    clicker = AutoClicker(time_lap=180, times=3)
     clicker.start()
