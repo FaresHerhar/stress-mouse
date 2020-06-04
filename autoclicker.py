@@ -26,15 +26,13 @@ class AutoClicker:
         self.time_lap = time_lap    # the time lap, between each click
         self.pos_x = pos_x          # the x posistion of the mouse
         self.pos_y = pos_y          # the y posistion of the mouse
-        self.clicks = clicks        # the number of clicke, per time
+        self.clicks = clicks        # the number of clicks, per time
         self.button = button        # the clicked button, either left or right
         self.times = times          # how many times, to do the clicks
 
         time_lap, is in Secondes
-        self.pos_x and self.pos_y, are integers but None by default
-                                    for current curssor position
-        self.clicks, integer it takes 1 by default, but in general
-                    it takes(1,2)
+        self.pos_x and self.pos_y, are integers but None by default for current curssor position
+        self.clicks, integer it takes 1 by default, but in general it takes(1,2)
         self.times, integer but None by default for no stop clicking.
         self.screen_width            # screen, monitor's width
         self.screen_height           # screen, monitor's height
@@ -59,11 +57,11 @@ class AutoClicker:
         if self.pos_x is None or self.pos_y is None:
             self.pos_x, self.pos_y = pyautogui.position()
         else:
-            # in case the mouse cursor position is out of boubds
+            # in case the mouse cursor position is out of bounds
             cond1 = (0 <= self.pos_x <= self.screen_width)
             cond2 = (0 <= self.pos_y <= self.screen_height)
 
-            # if so, exit the execution witha notification error
+            # if so, exit the execution with a error notification
             if cond1 or cond2:
                 raise ValueError('Mouse cursor: pox_x & pos_y out of bounds.')
 
