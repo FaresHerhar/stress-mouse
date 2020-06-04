@@ -8,7 +8,7 @@ Written in pytohn, looked for adding a GUI but i really suck at it :relieved: :r
     * pyautogui
 
 # Exemple
-```
+```python
 from autoclicker import AutoClicker
 
 # declaring, see autoclicker.py and read the documentation
