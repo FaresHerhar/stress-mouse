@@ -63,7 +63,7 @@ class AutoClicker:
 
             # if so, exit the execution with a error notification
             if not (cond1 and cond2):
-                raise ValueError('Mouse cursor: pox_x & pos_y out of bounds.')
+                raise ValueError('Mouse cursor: pos_x & pos_y out of bounds.')
 
                 sys.exit()
 
