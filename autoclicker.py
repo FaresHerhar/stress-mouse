@@ -62,7 +62,7 @@ class AutoClicker:
             cond2 = (0 <= self.pos_y <= self.screen_height)
 
             # if so, exit the execution with a error notification
-            if cond1 or cond2:
+            if not (cond1 and cond2):
                 raise ValueError('Mouse cursor: pox_x & pos_y out of bounds.')
 
                 sys.exit()
