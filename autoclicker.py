@@ -47,7 +47,7 @@ class AutoClicker:
 
     def click(self):
         """This method defines a single click event of the mouse."""
-        pyautogui.click(clicks=self.clicks, button=self.button)
+        pyautogui.click(self.pos_x, self.pos_y, clicks=self.clicks, button=self.button)
 
     def setMousePosition(self):
         """This method, defines the mouse's cursor position.
